@@ -46,7 +46,7 @@ class MainActivity : ComponentActivity() {
         Note: The minimum repeat interval that can be defined is 15 minutes (same as the JobScheduler API).
         https://developer.android.com/develop/background-work/background-tasks/persistent/getting-started/define-work
          */
-        val workRequest = PeriodicWorkRequestBuilder<BluetoothAirplaneModeWorker>(2, TimeUnit.SECONDS)
+        val workRequest = PeriodicWorkRequestBuilder<BluetoothAirplaneModeWorker>(2, TimeUnit.MINUTES)
             .build()
         WorkManager.getInstance(this).enqueue(workRequest)
 
